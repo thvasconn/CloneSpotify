@@ -1,0 +1,401 @@
+@font-face {
+    font-family: 'Spotify Mix';
+    src: url('./fonts/SpotifyMix-Regular.woff2') format('woff2'),
+        url('./fonts/SpotifyMix-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 25px 10px;
+    color: #fff;
+    font-family: 'Spotify Mix', sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;    
+    padding: 8px;
+    gap: 8px;
+}
+
+.sidebar {
+    position: relative;
+    width: 360px;
+    background-color: #121212;
+    padding: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-sizing: border-box;
+    gap: 2rem;
+}
+
+.nav-logo {
+    top: 35px;
+    left: 36px;
+    color: #fff;
+
+    line-height: 1;
+}
+
+
+.nav-logo i {
+    display: flex;
+    font-size: 3rem;
+}
+
+.nav-library {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.mais {
+    display: flex;
+    font-size: 25px;
+    margin-left: 10rem;
+    margin-bottom: auto;
+    font-weight: bold;
+    color: #858484;
+    cursor: pointer;
+    border-radius: 50%;
+    width:50px;
+    height: 25px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mais:hover{
+    background-color: #323232;
+}
+
+
+.nav-library i,
+.nav-library p {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0;
+}
+
+.nav-playlist,
+.nav-podcast {
+    background: #242424;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.nav-playlist button {
+    margin-top: 1rem;
+    border-radius: 15px;
+    width: 8rem;
+    padding: 8px 16px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.nav-podcast button {
+    margin-top: 1rem;
+    border-radius: 15px;
+    width: 10rem;
+    padding: 8px 16px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-playlist h5, .nav-podcast h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.nav-playlist p, .nav-podcast p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.nav-footer a{
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    color: #a7a7a7;
+    font-size: 12px;
+    margin-right: 13px;
+    margin-bottom: 8px;
+    
+}
+
+.nav-footer{
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-lang-button {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 15px;
+    padding: 8px 12px;
+    margin-top: 16px;
+    width: 200px;
+    cursor: pointer;
+}
+
+main {
+    padding: 24px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #121212;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.search-bar{
+    color: #242424;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #242424;
+    padding: 8px 12px;
+    width: 20rem;
+    border-radius: 2rem;
+     
+}
+
+.search-bar:hover{
+    background-color: #2f2f2f;
+    transition: all 0.2s ease;
+    border: 1px solid #4f4f4f;
+}
+
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    margin-left: 5px;
+    outline: none;
+}
+
+.search-bar i {
+    color: white;
+    padding: 0px 3px;
+    margin-right: 3px;
+}
+
+.artists-grid, .albums-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.artist-card, .album-card {
+    position: relative;
+    background-color: #121212;
+    padding: 16px;
+    width: 100%px;
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    }
+
+.artist-card:hover, .album-card:hover {
+    background-color: #282828;
+    transition: all 0.3s ease;
+    
+}
+
+.album-card img {
+    width: 100%;
+    height: 100;
+    border-radius: 5%;
+    margin-bottom: 5px;
+    max-height: 70%;
+
+}
+.artist-card img{
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    max-height: 70%;
+
+}
+
+.artist-card h3, .album-card h3{
+    font-size: 16px;
+    text-align: left;
+}
+
+.artist-card p, .album-card p{
+    font-size: 15px;
+    text-align: left;
+    color: #B7B3B6;
+}
+
+.album-title, .artist-title{
+    margin-top: 15px;
+    font-weight:bolder;
+    font-size: 35px;
+}
+
+.banner {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 15px;
+    font-size: 14px;
+    background: linear-gradient(90deg, #AF2896, #509BF5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner button {
+    border-radius: 20px;
+    color: #000;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 90px;
+    right: 20px;
+    background-color: rgb(0, 0, 0);
+    color: #1fdf64;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+.play-button i{
+    font-size: 60px;
+}
+
+
+.album-card:hover .play-button{
+    opacity: 1;
+    transform: translateY(-24px);
+}
+
+.artist-card:hover .play-button{
+    opacity: 1;
+    transform: translateY(-24px);
+}
+
+.cabecalho{
+    display: flex;
+    position: relative;
+    background-color: #000; 
+    gap: 30px;
+}
+
+.nav-logo i {
+    font-size: 45px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.cabecalho header{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30rem;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 16px;
+        gap: 1.5rem;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .cabecalho header {
+        width: 100%;
+        margin: 0;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .mais {
+        margin-left: auto;
+    }
+
+    .nav-lang-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .album-title,
+    .artist-title {
+        font-size: 1.5rem;
+    }
+
+    .search-bar input {
+        font-size: 0.9rem;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .banner button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
